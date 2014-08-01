@@ -6,5 +6,5 @@ A deprecated consumer of the Netflix API, this project allows a Netflix customer
 Based on CakePHP MVC framework and Netflix API (which has been closed to most all developers)
 
 Most of the code that matters is in:
-app/vendors/OAuth/netflix_consumer.php
-app/controllers/queues_controller.php
+* app/vendors/OAuth/netflix_consumer.php
+* app/controllers/queues_controller.php
