@@ -7,7 +7,7 @@ include 'XMPPHP/XMPP.php';
 
 #Use XMPPHP_Log::LEVEL_VERBOSE to get more logging for error reports
 #If this doesn't work, are you running 64-bit PHP with < 5.2.6?
-$conn = new XMPPHP_XMPP('talk.google.com', 5222, 'aceinfo06', 'Trh2doors.', 'xmpphp', 'gmail.com', $printlog=true, $loglevel=XMPPHP_Log::LEVEL_INFO);
+$conn = new XMPPHP_XMPP('talk.google.com', 5222, 'aceinfo06', '', 'xmpphp', 'gmail.com', $printlog=true, $loglevel=XMPPHP_Log::LEVEL_INFO);
 $conn->autoSubscribe();
 $conn->useEncryption(true);
 $vcard_request = array();
