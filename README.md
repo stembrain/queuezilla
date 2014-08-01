@@ -8,3 +8,4 @@ Based on CakePHP MVC framework and Netflix API (which has been closed to most al
 Most of the code that matters is in:
 * app/vendors/OAuth/netflix_consumer.php
 * app/controllers/queues_controller.php
+* app/vendors/xmpphp-0.1rc2-r77/cli_longrun_example_mine.php
