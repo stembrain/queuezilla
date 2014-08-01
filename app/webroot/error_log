@@ -1,0 +1,68 @@
+[06-Dec-2010 10:47:07] PHP Fatal error:  Call to undefined method UsersController::createNetflixConsumer() in /home/stembrai/public_html/lab/app/controllers/users_controller.php on line 15
+[06-Dec-2010 10:49:37] PHP Fatal error:  Call to undefined method UsersController::createNetflixConsumer() in /home/stembrai/public_html/lab/app/controllers/users_controller.php on line 15
+[06-Dec-2010 10:53:54] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/stembrai/public_html/lab/app/vendors/OAuth/netflix_consumer.php:79
+Stack trace:
+#0 /home/stembrai/public_html/lab/app/vendors/OAuth/netflix_consumer.php(79): SimpleXMLElement->__construct('Missing Require...')
+#1 /home/stembrai/public_html/lab/app/controllers/queues_controller.php(31): NetflixConsumer->getQueueItemsAsSimpleXMLElements()
+#2 /home/stembrai/public_html/lab/cake/dispatcher.php(204): QueuesController->viewNetflixQueue('2')
+#3 /home/stembrai/public_html/lab/cake/dispatcher.php(171): Dispatcher->_invoke(Array, Array)
+#4 /home/stembrai/public_html/lab/app/webroot/index.php(83): Dispatcher->dispatch(Object(QueuesController), Array)
+#5 {main}
+  thrown in /home/stembrai/public_html/lab/app/vendors/OAuth/netflix_consumer.php on line 79
+[09-Dec-2010 20:35:15] PHP Fatal error:  Call to undefined method stdClass::user() in /home/stembrai/public_html/lab/app/app_controller.php on line 43
+[09-Dec-2010 20:35:34] PHP Fatal error:  Call to undefined method stdClass::user() in /home/stembrai/public_html/lab/app/app_controller.php on line 53
+[09-Dec-2010 20:35:36] PHP Fatal error:  Call to undefined method stdClass::user() in /home/stembrai/public_html/lab/app/app_controller.php on line 53
+[09-Dec-2010 20:35:38] PHP Fatal error:  Call to undefined method stdClass::user() in /home/stembrai/public_html/lab/app/app_controller.php on line 53
+[09-Dec-2010 20:39:40] PHP Fatal error:  Call to undefined method stdClass::password() in /home/stembrai/public_html/lab/app/controllers/users_controller.php on line 135
+[09-Dec-2010 20:40:28] PHP Fatal error:  Call to a member function setFlash() on a non-object in /home/stembrai/public_html/lab/app/controllers/users_controller.php on line 138
+[09-Dec-2010 20:42:25] PHP Fatal error:  Call to a member function setFlash() on a non-object in /home/stembrai/public_html/lab/app/controllers/users_controller.php on line 141
+[11-Dec-2010 14:16:12] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/stembrai/public_html/lab/app/vendors/OAuth/netflix_consumer.php:90
+Stack trace:
+#0 /home/stembrai/public_html/lab/app/vendors/OAuth/netflix_consumer.php(90): SimpleXMLElement->__construct('Missing Require...')
+#1 /home/stembrai/public_html/lab/app/controllers/queues_controller.php(96): NetflixConsumer->getQueueItemsAsSimpleXMLElements()
+#2 /home/stembrai/public_html/lab/cake/dispatcher.php(204): QueuesController->saveNetflixQueue()
+#3 /home/stembrai/public_html/lab/cake/dispatcher.php(171): Dispatcher->_invoke(Array, Array)
+#4 /home/stembrai/public_html/lab/app/webroot/index.php(83): Dispatcher->dispatch(Object(QueuesController), Array)
+#5 {main}
+  thrown in /home/stembrai/public_html/lab/app/vendors/OAuth/netflix_consumer.php on line 90
+[11-Dec-2010 14:20:57] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/stembrai/public_html/lab/app/views/queues/list_queue_feeds.ctp:11
+Stack trace:
+#0 /home/stembrai/public_html/lab/app/views/queues/list_queue_feeds.ctp(11): SimpleXMLElement->__construct('Missing Require...')
+#1 /home/stembrai/public_html/lab/cake/libs/view/view.php(724): include('/home/stembrai/...')
+#2 /home/stembrai/public_html/lab/cake/libs/view/view.php(419): View->_render('/home/stembrai/...', Array)
+#3 /home/stembrai/public_html/lab/cake/libs/controller/controller.php(913): View->render(NULL, NULL, NULL)
+#4 /home/stembrai/public_html/lab/cake/dispatcher.php(207): Controller->render()
+#5 /home/stembrai/public_html/lab/cake/dispatcher.php(171): Dispatcher->_invoke(Object(QueuesController), Array)
+#6 /home/stembrai/public_html/lab/app/webroot/index.php(83): Dispatcher->dispatch()
+#7 {main}
+  thrown in /home/stembrai/public_html/lab/app/views/queues/list_queue_feeds.ctp on line 11
+[11-Dec-2010 14:27:41] PHP Fatal error:  Uncaught exception 'Exception' with message 'Headers already sent in /home/stembrai/public_html/lab/cake/libs/debugger.php on line 673. Cannot send log data to FirePHP. You must have Output Buffering enabled via ob_start() or output_buffering ini directive.' in /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php:950
+Stack trace:
+#0 /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php(625): FirePHP->newException('Headers already...')
+#1 /home/stembrai/public_html/lab/vendors/FirePHPCore/fb.php(62): FirePHP->fb(NULL)
+#2 /home/stembrai/public_html/lab/app/controllers/users_controller.php(59): fb()
+#3 /home/stembrai/public_html/lab/cake/dispatcher.php(204): UsersController->netflixCallback(Array, Array)
+#4 /home/stembrai/public_html/lab/cake/dispatcher.php(171): Dispatcher->_invoke(NULL)
+#5 /home/stembrai/public_html/lab/app/webroot/index.php(83): Dispatcher->dispatch()
+#6 {main}
+  thrown in /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php on line 950
+[11-Dec-2010 14:28:30] PHP Fatal error:  Uncaught exception 'Exception' with message 'Headers already sent in /home/stembrai/public_html/lab/cake/libs/debugger.php on line 673. Cannot send log data to FirePHP. You must have Output Buffering enabled via ob_start() or output_buffering ini directive.' in /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php:950
+Stack trace:
+#0 /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php(625): FirePHP->newException('Headers already...')
+#1 /home/stembrai/public_html/lab/vendors/FirePHPCore/fb.php(62): FirePHP->fb(NULL)
+#2 /home/stembrai/public_html/lab/app/controllers/users_controller.php(59): fb()
+#3 /home/stembrai/public_html/lab/cake/dispatcher.php(204): UsersController->netflixCallback(Array, Array)
+#4 /home/stembrai/public_html/lab/cake/dispatcher.php(171): Dispatcher->_invoke(NULL)
+#5 /home/stembrai/public_html/lab/app/webroot/index.php(83): Dispatcher->dispatch()
+#6 {main}
+  thrown in /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php on line 950
+[11-Dec-2010 14:30:53] PHP Fatal error:  Uncaught exception 'Exception' with message 'Headers already sent in /home/stembrai/public_html/lab/cake/libs/debugger.php on line 673. Cannot send log data to FirePHP. You must have Output Buffering enabled via ob_start() or output_buffering ini directive.' in /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php:950
+Stack trace:
+#0 /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php(625): FirePHP->newException('Headers already...')
+#1 /home/stembrai/public_html/lab/vendors/FirePHPCore/fb.php(62): FirePHP->fb(NULL)
+#2 /home/stembrai/public_html/lab/app/controllers/users_controller.php(59): fb()
+#3 /home/stembrai/public_html/lab/cake/dispatcher.php(204): UsersController->netflixCallback(Array, Array)
+#4 /home/stembrai/public_html/lab/cake/dispatcher.php(171): Dispatcher->_invoke(NULL)
+#5 /home/stembrai/public_html/lab/app/webroot/index.php(83): Dispatcher->dispatch()
+#6 {main}
+  thrown in /home/stembrai/public_html/lab/vendors/FirePHPCore/FirePHP.class.php on line 950

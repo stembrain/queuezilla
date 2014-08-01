@@ -1,0 +1,33 @@
+Given:
+consumer key w2pvq3yymthnj23vteqcp4b9
+consumer secret GNmPxfA3Bw
+
+
+Netflix->searchByTitle needs a consumer key according to my notes. My notes for getAccessParams say that the consumer key might be unnecessary. Either way the consumer key is part of the consumer token which all requests are signed with, so test if the consumer key needs to be part of the access params just to search by title.
+
+index.php broke something when being modularized.
+
+
+Establish "request token" by providing consumer_key and consumer_secret to request token endpoint, http://api.netflix.com/oauth/request_token
+request token 2g22frwybnyqu4s5cy8ufsdb as oauth_token
+request secret SrSnxR42ARzs as oauth_token_secret
+app name QueueConverter as application_name
+
+https://api-user.netflix.com/oauth/login?oauth_token=2g22frwybnyqu4s5cy8ufsdb&
+oauth_callback=http://term.ie/oauth/example/client.php&
+oauth_consumer_key=w2pvq3yymthnj23vteqcp4b9
+&application_name=QueueConverter
+^- visiting this url returns 2g22frwybnyqu4s5cy8ufsdb as param oauth_token
+
+now use endpoint http://api.netflix.com/oauth/access_token
+and append consumer key, consumer secret, request token, request secret by clicking Access_token button
+
+returns page with body 
+oauth_token=T1hHmWKIPF7fYnKDMlxcIXSg2cbvlQB__97WiO5DmchvFTvSlROT1bGhp4sANddOzRowB1IFK9hfHgjJUpL2xiLg--&
+user_id=T1DOCDyCxe7j3gN6N_RIiBiKLNF4PvM4hqnyMYSD.LEv4-&
+oauth_token_secret=gTjFJfQ7G88J
+
+userid T1DOCDyCxe7j3gN6N_RIiBiKLNF4PvM4hqnyMYSD.LEv4-
+
+
+NOTE: When signing oauth request, use new OAuthSignatureMethod_HMAC_SHA1() instead of some param shit from the oauth demo code

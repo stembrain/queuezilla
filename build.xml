@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Querilla Deployment Script" default="rsync_remotehost" basedir=".">
+	<!-- Taken from http://www.lightcubesolutions.com/blog/?p=104 -->
+	<target name="rsync_remotehost">
+		<property name="cfg.someDir" value="./" />
+		<property name="rsync.server" value="stembrain.com" />
+		<!-- Exclude all files,dirs that are hidden -->
+		<property name="rsync.dir" value="~/stembrain.com/lab/" />
+		<exec executable="rsync" dir="${cfg.someDir}" failifexecutionfails="true">
+			<arg line="-aOvz --chmod=g-w,Da+rX,Fa+r,F-X --exclude app/tmp/* --exclude .svn --exclude .DS_Store . stembrain@${rsync.server}:${rsync.dir}" />
+		</exec>
+	</target>
+</project>
